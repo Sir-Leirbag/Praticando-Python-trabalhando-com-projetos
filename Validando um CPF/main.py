@@ -1,6 +1,5 @@
 def primeiro_digito(cpf):
     fatores = [10, 9, 8, 7, 6, 5, 4, 3, 2]
-    # Separa os dígitos e multiplica cada um pelo seu fator correspondente
     cpf_convertido = [int(digito) * fator for digito, fator in zip(cpf, fatores)]
     soma = sum(cpf_convertido)
     resto = soma % 11
@@ -10,7 +9,6 @@ def primeiro_digito(cpf):
 
 def segundo_digito(cpf):
     fatores = [11, 10, 9, 8, 7, 6, 5, 4, 3, 2]
-    # Separa os dígitos e multiplica cada um pelo seu fator correspondente
     cpf_convertido = [int(digito) * fator for digito, fator in zip(cpf, fatores)]
     soma = sum(cpf_convertido)
     resto = soma % 11
