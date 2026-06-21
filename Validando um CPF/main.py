@@ -14,3 +14,5 @@ digitos = separa_digitos(cpf)
 
 if len(digitos) != 11:
     print('O CPF deve ter exatamente 11 dígitos.')
+else:
+    print('CPF válido.')
