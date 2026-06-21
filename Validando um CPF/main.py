@@ -8,7 +8,7 @@ def primeiro_digito(cpf):
         return 0
     else:
         return 11 - resto
-    
+
 def segundo_digito(cpf):
     fatores = [11, 10, 9, 8, 7, 6, 5, 4, 3, 2]
     # Separa os dígitos e multiplica cada um pelo seu fator correspondente
@@ -19,7 +19,6 @@ def segundo_digito(cpf):
         return 0
     else:
         return 11 - resto
-        
 
 def valida_cpf(cpf):
     if not cpf.isdigit():
@@ -28,10 +27,10 @@ def valida_cpf(cpf):
         return 'Erro: O CPF deve ter exatamente 11 dígitos.'
     if cpf == cpf[0] * 11:
         return 'Erro: CPF inválido.'
+    if int(cpf[9]) != primeiro_digito(cpf) or int(cpf[10]) != segundo_digito(cpf):
+        return 'Erro: CPF inválido.'
     return 'CPF válido.'
 
 cpf = input('Digite seu CPF: ')
 
 print(valida_cpf(cpf))
-print(primeiro_digito(cpf))
-print(segundo_digito(cpf))
