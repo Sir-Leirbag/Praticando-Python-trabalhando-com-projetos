@@ -13,7 +13,10 @@ def valida_cpf(cpf):
         return 'Erro: O CPF deve ter exatamente 11 dígitos.'
     if cpf == cpf[0] * 11:
         return 'Erro: CPF inválido.'
-    if int(cpf[9]) != calcula_digito(cpf, range(10, 1, -1)) or int(cpf[10]) != calcula_digito(cpf, range(11, 1, -1)):
+    if (
+        int(cpf[9]) != calcula_digito(cpf, range(10, 1, -1)) 
+        or int(cpf[10]) != calcula_digito(cpf, range(11, 1, -1))
+    ):
         return 'Erro: CPF inválido.'
     return 'CPF válido.'
 
