@@ -14,15 +14,16 @@ def validar_senha(senha):
     else:
         return False
 
-def main(senha):
+def main():
+    senha = []
     gerar_senha(senha)
     if validar_senha(senha) == False:
         senha = []
-        main(senha)
+        main()
     else:
         print(f"Senha gerada: {''.join(senha)}")
 
-senha = []
+
 elementos = ('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*?,.')
 
-main(senha)
+main()
