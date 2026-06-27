@@ -17,7 +17,7 @@ else:
     if jogada_usuario == jogada_computador:
         print('Empate!')
     elif (
-        jogada_usuario == 'pedra' and jogada_computador == 'tesora'
+        jogada_usuario == 'pedra' and jogada_computador == 'tesoura'
         or jogada_usuario == 'papel' and jogada_computador == 'pedra'
         or jogada_usuario == 'tesoura' and jogada_computador == 'papel'
     ):
