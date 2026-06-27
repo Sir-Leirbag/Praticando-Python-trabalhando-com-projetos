@@ -5,7 +5,7 @@ def gerar_elemento():
     return random.choice(opcoes)
 
 def limpar_entrada(elemento):
-    return elemento.lower()
+    return elemento.strip().lower()
 
 elemento = input('Escolha: pedra, papel ou tesoura? ')
 jogada_computador = gerar_elemento()
