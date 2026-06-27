@@ -31,3 +31,5 @@ elif elemento == 'Tesoura' and jogada_computador == 'Papel':
 elif elemento == 'Tesoura' and jogada_computador == 'Pedra':
     print(f'O computador escolheu: {jogada_computador}')
     print('O computador venceu!')
+else:
+    print('Jogada inválida')
