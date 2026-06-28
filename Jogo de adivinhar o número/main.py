@@ -1,9 +1,7 @@
 import random
 
 def gerar_numero_aleatorio():
-    lista = tuple(range(1,101))
-    numero_aleatorio = random.choice(lista)
-    return numero_aleatorio
+    return random.randint(1,101)
 
 def comparar_numero(numero):
     if numero < 0 or numero > 100:
