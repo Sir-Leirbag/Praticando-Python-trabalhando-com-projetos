@@ -12,7 +12,7 @@ while True:
     except ValueError:
         print('Entrada inválida: Digite apenas números.')
         continue
-    if numero < 1 or numero > 100:
+    if not 1 <= numero <= 100:
         print('Entrada inválida: Número fora do intervalo! Digite um número entre 1 e 100.')
         continue
     tentativas += 1
