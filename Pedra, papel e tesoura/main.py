@@ -1,10 +1,16 @@
 import random
 
-opcoes = ('pedra', 'papel', 'tesoura')
-
 def gerar_elemento():
     return random.choice(opcoes)
 
+def usuario_venceu(usuario, computador):
+    return (
+        usuario == 'pedra' and computador == 'tesoura'
+        or usuario == 'papel' and computador == 'pedra'
+        or usuario == 'tesoura' and computador == 'papel'
+    )
+
+opcoes = ('pedra', 'papel', 'tesoura')
 elemento = input('Escolha: pedra, papel ou tesoura? ')
 jogada_usuario = elemento.strip().lower()
 
@@ -16,11 +22,7 @@ else:
 
     if jogada_usuario == jogada_computador:
         print('Empate!')
-    elif (
-        jogada_usuario == 'pedra' and jogada_computador == 'tesoura'
-        or jogada_usuario == 'papel' and jogada_computador == 'pedra'
-        or jogada_usuario == 'tesoura' and jogada_computador == 'papel'
-    ):
+    elif usuario_venceu(jogada_usuario, jogada_computador):
         print('Você venceu!')
     else:
         print('O computador venceu!')
