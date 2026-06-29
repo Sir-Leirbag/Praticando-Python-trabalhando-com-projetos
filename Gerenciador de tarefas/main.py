@@ -1,10 +1,12 @@
 def adicionar_tarefa(tarefa_adicionada):
     tarefa_adicionada = input('\nDigite a tarefa que deseja adicionar: ')
     lista_de_tarefas.append(tarefa_adicionada)
-    print('\nTarefa adicionada!')
+    print('Tarefa adicionada!')
 
-def visualizar_tarefas():
-    print(lista_de_tarefas)
+def visualizar_tarefas(lista_de_tarefas):
+    print('\nTarefas:')
+    for i, tarefa in enumerate(lista_de_tarefas, start=1):
+        print(f'{i}. {tarefa}')
 
 def remover_tarefa(tarefa_removida):
     tarefa_removida = input('\nDigite a tarefa que será removida: ')
@@ -33,7 +35,7 @@ Escolha uma opcão: '''))
             adicionar_tarefa(tarefa)
             continue
         elif opcao == 2:
-            visualizar_tarefas()
+            visualizar_tarefas(lista_de_tarefas)
             continue
         elif opcao == 3:
             remover_tarefa(tarefa)
