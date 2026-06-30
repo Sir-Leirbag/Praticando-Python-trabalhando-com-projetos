@@ -11,7 +11,7 @@ def visualizar_tarefas(lista_de_tarefas):
 def remover_tarefa(tarefa_removida):
     tarefa_removida = int(input('\nDigite o número da tarefa a ser removida: '))
     indice = tarefa_removida - 1
-    lista_de_tarefas.pop(indice)
+    tarefa_removida = lista_de_tarefas.pop(indice)    
     print(f'Tarefa {tarefa_removida} removida.')
 
 lista_de_tarefas = []
