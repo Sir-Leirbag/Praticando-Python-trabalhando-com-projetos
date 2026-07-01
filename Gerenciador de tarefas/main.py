@@ -12,7 +12,7 @@ def remover_tarefa(tarefa_removida):
     while True:
         try:
             tarefa_removida = int(input('\nDigite o número da tarefa a ser removida:'))
-            if lista_de_tarefas == []:
+            if not lista_de_tarefas:
                 print('Erro: Nenhuma tarefa para remover.')
                 break
             else:
