@@ -11,7 +11,7 @@ def visualizar_tarefas(lista_de_tarefas):
 def remover_tarefa(tarefa_removida):
     while True:
         try:
-            tarefa_removida = int(input('\nDigite o número da tarefa a ser removida: '))
+            tarefa_removida = (input('\nDigite o número da tarefa a ser removida:'))
             if lista_de_tarefas == []:
                 print('Erro: Nenhuma tarefa para remover.')
                 break
@@ -24,9 +24,9 @@ def remover_tarefa(tarefa_removida):
             continue
         except IndexError:
             if len(lista_de_tarefas) == 1:
-                print(f'Erro: Opção inválida! Apenas há 1 opção.')
+                print(f'Erro: Opção inválida! Há apenas 1 opção.')
             if len(lista_de_tarefas) > 1:
-                print(f'Erro: Opção inválida! Escolha uma opcão entre 1 e {len(lista_de_tarefas)}')
+                print(f'Erro: Opção inválida! Escolha uma opcão entre 1 e {len(lista_de_tarefas)}.')
             continue            
         break
 
