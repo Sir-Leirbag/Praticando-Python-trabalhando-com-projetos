@@ -12,12 +12,19 @@ def remover_tarefa(tarefa_removida):
     while True:
         try:
             tarefa_removida = int(input('\nDigite o número da tarefa a ser removida: '))
+            if lista_de_tarefas == []:
+                print('Erro: Nenhuma tarefa para remover.')
+                break
+            else:
+                indice = tarefa_removida - 1
+                tarefa_removida = lista_de_tarefas.pop(indice)    
+                print(f'Tarefa {tarefa_removida} removida.')
         except ValueError:
             print('Erro: Entrada inválida! Digite um número.')
             continue
-        indice = tarefa_removida - 1
-        tarefa_removida = lista_de_tarefas.pop(indice)    
-        print(f'Tarefa {tarefa_removida} removida.')
+        except IndexError:
+            print(f'Erro: Opção inválida!')
+            continue            
         break
 
 lista_de_tarefas = []
